@@ -9,6 +9,11 @@ public class Main {
         System.out.println(hasTeen(9, 99, 19)); // true;
         System.out.println(hasTeen(23, 15, 42)); // true;
         System.out.println(hasTeen(22, 23, 34)); //false;
+        System.out.println("Playful Cat:");
+        System.out.println(isCatPlaying(true, 10)); //false
+        System.out.println(isCatPlaying(false, 36)); //false
+        System.out.println(isCatPlaying(false, 35)); // true
+
     }
     public static boolean shouldWakeUp(boolean barking, int hourOfDay) {
 
@@ -31,5 +36,16 @@ public class Main {
     public static boolean hasTeen(int a, int b, int c) {
 
         return inAgeLimit(a) || inAgeLimit(b) || inAgeLimit(c);
+    }
+    public static boolean isCatPlaying(boolean summer, int temperature) {
+
+        int minTemp = 25;
+        int maxTemp = 35;
+
+        if(summer)
+            maxTemp = 45;
+
+
+        return minTemp <= temperature && maxTemp >= temperature;
     }
 }
